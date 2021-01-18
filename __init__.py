@@ -31,14 +31,14 @@ class OctoPiSkill(MycroftSkill):
         'targets': {
             'tool0': 215
         }}
-        resp = requests.post(url, data=data, headers=self.headers, , verify=False)
+        resp = requests.post(url, data=data, headers=self.headers, verify=False)
         print(resp.text)
         
     def preheat_bed(self):
         url = f'{self.base_url}/printer/bed' 
         data = {'command': 'target',
         'target': 60 }
-        resp = requests.post(url, data=data, headers=self.headers, , verify=False)
+        resp = requests.post(url, data=data, headers=self.headers, verify=False)
         print(resp.text)
 
     def stop(self):
