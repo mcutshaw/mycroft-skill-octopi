@@ -8,13 +8,13 @@
                         "name": "API",
                         "type": "password",
                         "label": "API Key",
-                        "value": ""
+                        "value": "abcd"
                     },
                     {
                         "name": "url",
                         "type": "text",
                         "label": "URL",
-                        "value": ""
+                        "value": "127.0.0.1"
                     }
                 ]
             }
