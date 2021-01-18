@@ -1,7 +1,10 @@
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.util.log import LOG
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import requests
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class OctoPiSkill(MycroftSkill):
@@ -28,14 +31,14 @@ class OctoPiSkill(MycroftSkill):
         'targets': {
             'tool0': 215
         }}
-        resp = requests.post(url, data=data, headers=self.headers)
+        resp = requests.post(url, data=data, headers=self.headers, , verify=False)
         print(resp.text)
         
     def preheat_bed(self):
         url = f'{self.base_url}/printer/bed' 
         data = {'command': 'target',
         'target': 60 }
-        resp = requests.post(url, data=data, headers=self.headers)
+        resp = requests.post(url, data=data, headers=self.headers, , verify=False)
         print(resp.text)
 
     def stop(self):
