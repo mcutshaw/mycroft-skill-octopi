@@ -33,6 +33,9 @@ class OctoPiSkill(MycroftSkill):
         }}
         resp = requests.post(url, data=data, headers=self.headers, verify=False)
         print(resp.text)
+        print(data)
+        print(url)
+        print(self.headers)
         
     def preheat_bed(self):
         url = f'{self.base_url}/printer/bed' 
@@ -40,6 +43,9 @@ class OctoPiSkill(MycroftSkill):
         'target': 60 }
         resp = requests.post(url, data=data, headers=self.headers, verify=False)
         print(resp.text)
+        print(data)
+        print(url)
+        print(self.headers)
 
     def stop(self):
        return True
