@@ -1,0 +1,23 @@
+{
+    "skillOctoPi": {
+        "sections": [
+            {
+                "name": "Display",
+                "fields": [
+                    {
+                        "name": "API",
+                        "type": "password",
+                        "label": "API Key",
+                        "value": ""
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
